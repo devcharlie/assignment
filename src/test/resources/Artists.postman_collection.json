@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "3b59406c-0943-4e63-95a2-b3d11234fd45",
+		"name": "Artists",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Artist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/2",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Artists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "mich",
+							"disabled": true
+						},
+						{
+							"key": "lastName",
+							"value": "an",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "sculptor",
+							"disabled": true
+						},
+						{
+							"key": "birthdayMonth",
+							"value": "4",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Artist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"firstName\": \"Cathal\",\r\n    \"middleName\": \"\",\r\n    \"lastName\": \"O\",\r\n    \"category\": \"PAINTER\",\r\n    \"birthday\": \"1976-04-05\",\r\n    \"email\": \"3jefgza@ddmail.com\",\r\n    \"notes\": \"GOOD PAINTER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Artist",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:8080/artists"
+		}
+	]
+}
